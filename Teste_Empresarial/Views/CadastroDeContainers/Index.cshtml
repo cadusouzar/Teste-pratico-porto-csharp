@@ -1,0 +1,58 @@
+﻿@model IEnumerable<Teste_Empresarial.Models.CadastroDeContainer>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Lista de Containers</h2>
+
+<p>
+    <a asp-action="CadastroCreateOrEdit">Cadastrar novo container</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FullName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ContainerNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Category)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FullName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContainerNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Category)
+            </td>
+            <td>
+                <a asp-action="CadastroCreateOrEdit" asp-route-id="@item.ContainerID">Edit</a> |
+                <a asp-action="Delete" asp-route-id="@item.ContainerID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

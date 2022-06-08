@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Teste_Empresarial.Models.MovimentacaoDeContainer>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Movimentações</h2>
+
+<p>
+    <a asp-action="MovimentacaoCreateOrEdit">Nova movimentação</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ContainerNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TypeOfMovement)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InitialDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FinalDate)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContainerNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TypeOfMovement)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InitialDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FinalDate)
+            </td>
+            <td>
+                <a asp-action="MovimentacaoCreateOrEdit" asp-route-id="@item.MovementID">Edit</a> |
+                <a asp-action="Delete" asp-route-id="@item.MovementID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
