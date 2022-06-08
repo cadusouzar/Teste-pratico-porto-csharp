@@ -12554,11 +12554,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\cadus\\Desktop\\Teste_Empresarial\\Teste_Empresarial\\Teste_Empresarial.csproj",
+      "projectUniqueName": "C:\\Users\\cadus\\Documents\\Teste-pratico-porto\\pos-solucao\\Teste_Empresarial\\Teste_Empresarial.csproj",
       "projectName": "Teste_Empresarial",
-      "projectPath": "C:\\Users\\cadus\\Desktop\\Teste_Empresarial\\Teste_Empresarial\\Teste_Empresarial.csproj",
+      "projectPath": "C:\\Users\\cadus\\Documents\\Teste-pratico-porto\\pos-solucao\\Teste_Empresarial\\Teste_Empresarial.csproj",
       "packagesPath": "C:\\Users\\cadus\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\cadus\\Desktop\\Teste_Empresarial\\Teste_Empresarial\\obj\\",
+      "outputPath": "C:\\Users\\cadus\\Documents\\Teste-pratico-porto\\pos-solucao\\Teste_Empresarial\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
