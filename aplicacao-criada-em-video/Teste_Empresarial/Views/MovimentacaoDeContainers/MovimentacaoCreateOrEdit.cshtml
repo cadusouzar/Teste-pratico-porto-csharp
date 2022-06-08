@@ -1,0 +1,48 @@
+﻿@model Teste_Empresarial.Models.MovimentacaoDeContainer
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>MovimentacaoDeContainer</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="MovimentacaoCreateOrEdit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ContainerNumber" class="control-label"></label>
+                <select asp-for="ContainerNumber" class="form-control" asp-items="@Model.Containers"></select>
+                <span asp-validation-for="ContainerNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TypeOfMovement" class="control-label"></label>
+                <select asp-for="TypeOfMovement" class="form-control" asp-items="@(new SelectList(Enum.GetValues(typeof(TypeOfMovement))))"></select>
+                <span asp-validation-for="TypeOfMovement" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="InitialDate" class="control-label"></label>
+                <input asp-for="InitialDate" class="form-control" />
+                <span asp-validation-for="InitialDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FinalDate" class="control-label"></label>
+                <input asp-for="FinalDate" class="form-control" />
+                <span asp-validation-for="FinalDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
